@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour 
 {
     public float doorSpeed;
+    public AudioSource doorOpenSound;
 
     // Create a boolean value called "locked" that can be checked in OnDoorClicked() 
     // Create a boolean value called "opening" that can be checked in Update() 
@@ -35,6 +36,7 @@ public class Door : MonoBehaviour
         {
             // Set the "opening" boolean to true
             opening = true;
+            doorOpenSound.Play();
 
         }
         // (optionally) Else
